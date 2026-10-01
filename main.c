@@ -1,12 +1,25 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]){
-    int a,sum,i;
-    sum=0;
-    printf("input a number : ");
-    scanf("%d",&a);
-    for(i=0;i<a;i++){
-        sum+=i+1;
+    int a,b;
+    char y;
+    printf("enter the calculation : ");
+    scanf("%d %c %d",&a, &y, &b);
+    switch(y){
+        case '+':
+            printf("%d %c %d = %d",a,y,b,a+b);
+            break;
+        case '-':
+            printf("%d %c %d = %d",a,y,b,a-b);
+            break;
+        case '*':
+            printf("%d %c %d = %d",a,y,b,a*b);
+            break;
+        case '/':
+            printf("%d %c %d = %d",a,y,b,a/b);
+            break;
+        case '%':
+            printf("%d %c %d = %d",a,y,b,a%b);
+            break;
     }
-    printf("The result is %d",sum);
 }

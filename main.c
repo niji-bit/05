@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]){
-    int num;
-    char c;
-    num=0;
-    printf("input a string : ");
-    scanf("%c",&c);
-    while ((c=getchar())!='\n'){
-        if(c>='0'&&c<='9'){
-            num++;
-        }
+    int a,sum,i;
+    sum=0;
+    printf("input a number : ");
+    scanf("%d",&a);
+    for(i=0;i<a;i++){
+        sum+=i+1;
     }
-    printf("The number of digits is %d",num);
+    printf("The result is %d",sum);
 }

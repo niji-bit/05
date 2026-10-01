@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]){
-    int a;
-    printf("enter an integer : ");
-    scanf("%d",&a);
-    if(a<0){
-        printf("The absolute value is %d", 0-a);
+    int num;
+    char c;
+    num=0;
+    printf("input a string : ");
+    scanf("%c",&c);
+    while ((c=getchar())!='\n'){
+        if(c>='0'&&c<='9'){
+            num++;
+        }
     }
-    else {
-        printf("The absolute value is %d", a);
-    }
+    printf("The number of digits is %d",num);
 }

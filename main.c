@@ -1,25 +1,19 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]){
-    int a,b;
-    char y;
-    printf("enter the calculation : ");
-    scanf("%d %c %d",&a, &y, &b);
-    switch(y){
-        case '+':
-            printf("%d %c %d = %d",a,y,b,a+b);
-            break;
-        case '-':
-            printf("%d %c %d = %d",a,y,b,a-b);
-            break;
-        case '*':
-            printf("%d %c %d = %d",a,y,b,a*b);
-            break;
-        case '/':
-            printf("%d %c %d = %d",a,y,b,a/b);
-            break;
-        case '%':
-            printf("%d %c %d = %d",a,y,b,a%b);
-            break;
-    }
+    int answer,sum,a;
+    sum=0;
+    answer=59;
+    do{
+        printf("Guess a number : ");
+        scanf("%d",&a);
+        sum++;
+        if (a<answer){
+            printf("low!\n");
+        }
+        else if (a>answer){
+            printf("high!\n");
+        }
+    } while(a!=answer);
+    printf("Congratultaion! trials:%d",sum);
 }

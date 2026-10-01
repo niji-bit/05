@@ -5,12 +5,9 @@ int main(int argc, char *argv[]){
     printf("enter an integer : ");
     scanf("%d",&a);
     if(a<0){
-        printf("It is negative number.");
+        printf("The absolute value is %d", 0-a);
     }
-    else if(a==0){
-        printf("It is 0.");
-    }
-    else{
-        printf("It is positive number.");
+    else {
+        printf("The absolute value is %d", a);
     }
 }
